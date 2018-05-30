@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/add_tag_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="添加贴纸"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"/>
+        <FrameLayout
+            android:id="@+id/tag_view_pannel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/add_tag_view"
+            android:background="@android:color/holo_blue_light">
+            <com.yunsimon.smartview.view.TagViewContainer
+                android:id="@+id/tag_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
